@@ -49,15 +49,16 @@ button:disabled {
 
 #recordButton {
     background-color: #dc3545; /* Red color */
-    font-size: 18px; /* Slightly bigger font */
-    padding: 12px 24px; /* Slightly bigger button */
+    font-size: 18px;
+    padding: 12px 24px;
 }
 
 input {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
     padding: 10px;
     font-size: 16px;
-    margin: 10px 0;
-    width: 80%;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
@@ -80,13 +81,20 @@ input {
 }
 
 .result-entry {
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0; /* Faint line between results */
+    padding: 10px 0;
 }
 
-.edit-button, .delete-button {
-    padding: 5px 10px;
-    font-size: 12px;
-    margin-left: 10px;
+.result-entry:last-child {
+    border-bottom: none; /* No line after the last result */
+}
+
+.result-entry .buttons {
+    display: flex;
+    gap: 10px;
 }
 
 .edit-button {
