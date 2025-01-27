@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px; /* Limit the width of the container */
+    width: 100%;
+    max-height: 90vh; /* Limit the height of the container */
+    overflow: hidden; /* Hide overflow */
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#stopwatch {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+#resultMessage {
+    color: red;
+    margin: 10px 0;
+}
+
+#results {
+    margin-top: 20px;
+    text-align: left;
+    overflow-y: auto; /* Make the results section scrollable */
+    flex-grow: 1; /* Allow the results section to grow within the container */
+    max-height: 300px; /* Set a maximum height for the results section */
+    border: 1px solid #ccc; /* Optional: Add a border for visual clarity */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.result-entry {
+    margin-bottom: 10px;
+}
+
+.edit-button, .delete-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.edit-button {
+    background-color: #28a745;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+/* Custom Input Dialog */
+.dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%; /* Adjust the width of the dialog */
+    max-width: 400px; /* Set a maximum width for larger screens */
+}
+
+.dialog-content h2 {
+    margin-bottom: 20px;
+}
+
+.dialog-content input {
+    width: 100%; /* Make the input field fill the dialog width */
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.dialog-content button {
+    margin: 0 10px;
+}
+
+.warning-message {
+    color: red;
+    margin-bottom: 10px;
+}
