@@ -119,7 +119,7 @@ input {
 }
 
 .dialog-content {
-    background-color: #fff;
+    background-color: #2b2828;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -128,7 +128,10 @@ input {
 }
 
 .dialog-content h2 {
+    color: white;
     margin-bottom: 20px;
+
+
 }
 
 .dialog-content input {
