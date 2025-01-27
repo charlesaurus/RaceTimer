@@ -170,3 +170,51 @@ input {
     color: #666;
     text-shadow: none;
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.container.dark-mode {
+    background-color: #444;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+button.dark-mode {
+    background-color: #555;
+    color: white;
+}
+
+#stopwatch.dark-mode {
+    color: #fff;
+}
+
+#results.dark-mode {
+    background-color: #555;
+    color: white;
+    border: 1px solid #777;
+}
+
+.result-entry.dark-mode {
+    border-bottom: 1px solid #777;
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+    color: #dc3545; /* Red when hovering */
+}
+
