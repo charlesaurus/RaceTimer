@@ -134,3 +134,19 @@ document.getElementById('editSaveButton').addEventListener('click', () => {
 document.getElementById('editCancelButton').addEventListener('click', () => {
     document.getElementById('editDialog').style.display = 'none';
 });
+
+// Dark Mode Toggle
+document.getElementById('darkModeToggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('.container').classList.toggle('dark-mode');
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => button.classList.toggle('dark-mode'));
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.classList.toggle('dark-mode');
+    const recordButton = document.getElementById('recordButton');
+    recordButton.classList.toggle('dark-mode');
+    const exportButton = document.getElementById('exportButton');
+    exportButton.classList.toggle('dark-mode');
+    document.getElementById('darkModeToggle').textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
+});
+
