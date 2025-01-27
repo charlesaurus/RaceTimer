@@ -22,7 +22,7 @@ function updateStopwatch() {
 }
 
 // Record finish time
-document.getElementById('recordButton').addEventListener('click', () => {
+function recordFinishTime() {
     if (!stopwatchRunning) {
         document.getElementById('resultMessage').textContent = "Error: Stopwatch is not running. Start the race first.";
         return;
@@ -44,6 +44,23 @@ document.getElementById('recordButton').addEventListener('click', () => {
 
     // Update the results display
     updateResultsDisplay();
+}
+
+// Add event listener for "Record Finish Time" button
+document.getElementById('recordButton').addEventListener('click', recordFinishTime);
+
+// Add event listener for "Enter" key in the bib input field
+document.getElementById('bibInput').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        recordFinishTime();
+    }
+});
+
+// Add event listener for "Enter" key in the edit bib input field
+document.getElementById('editBibInput').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        document.getElementById('editSaveButton').click();
+    }
 });
 
 // Function to update the results display
