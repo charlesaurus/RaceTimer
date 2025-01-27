@@ -158,4 +158,33 @@ window.addEventListener('beforeunload', (event) => {
     return message; // For some older browsers
 });
 
+// Edit dialog "Save" functionality
+document.getElementById('editSaveButton').addEventListener('click', () => {
+    const newBibNumber = document.getElementById('editBibInput').value.trim();
+    if (!newBibNumber) {
+        alert("Bib number cannot be empty.");
+        return;
+    }
+    raceResults[currentEditIndex].bibNumber = newBibNumber;
+    document.getElementById('editDialog').style.display = 'none';
+    updateResultsDisplay();
+});
 
+// Allow pressing "Enter" or "Go" on mobile to save
+document.getElementById('editBibInput').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === 'Go') {
+        const newBibNumber = document.getElementById('editBibInput').value.trim();
+        if (!newBibNumber) {
+            alert("Bib number cannot be empty.");
+            return;
+        }
+        raceResults[currentEditIndex].bibNumber = newBibNumber;
+        document.getElementById('editDialog').style.display = 'none';
+        updateResultsDisplay();
+    }
+});
+
+// Cancel button closes the dialog
+document.getElementById('editCancelButton').addEventListener('click', () => {
+    document.getElementById('editDialog').style.display = 'none';
+});
