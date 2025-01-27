@@ -150,3 +150,12 @@ document.getElementById('darkModeToggle').addEventListener('click', () => {
     document.getElementById('darkModeToggle').textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
 });
 
+// Prompt before closing or refreshing the page
+window.addEventListener('beforeunload', (event) => {
+    // Set the message that will appear in the confirmation dialog
+    const message = "Are you sure you want to leave this page? Your progress may be lost.";
+    event.returnValue = message; // Standard for most browsers
+    return message; // For some older browsers
+});
+
+
